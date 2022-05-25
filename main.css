@@ -77,20 +77,24 @@ body {
   gap: 20px;
 }
 
+.header .top .left {
+  display: flex;
+  width: 50%;
+}
+
 .header .top i {
   color: var(--font-secondary);
 }
 
-.header .top input {
+.header .top .left input {
   background-color: var(--base);
   border-style: none;
+  color: var(--font-main);
   border-radius: 2em;
   height: 2rem;
   font-size: 1rem;
   padding: 0 1rem 0 1rem;
   flex-grow: 1;
-  /* width: 40rem; */
-  /* todo: responsive width */
 }
 
 .header .top img {

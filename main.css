@@ -4,9 +4,8 @@
   --base: #e1e5ea;
   --card: white;
   --accent: #f0b429;
-  --font-dark: black;
-  --font-med: rgb(88, 88, 88);
-  --font-light: rgb(219, 219, 219);
+  --font-main: black;
+  --font-secondary: rgb(88, 88, 88);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -17,6 +16,7 @@ body {
   margin: 0;
   font-size: 16px;
   background: var(--base);
+  color: var(--font-main);
 }
 
 .sidebar {
@@ -28,6 +28,14 @@ body {
 .logo {
   font-size: 2rem;
   font-weight: bold;
+  display: grid;
+  grid-template-columns: 2.6rem 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.logo i {
+  font-size: 2.6rem;
 }
 
 .sidebar ul {
@@ -40,6 +48,14 @@ body {
 
 .sidebar li {
   margin: 16px 0 16px 0;
+  display: grid;
+  grid-template-columns: 1em 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.sidebar li i {
+  font-size: 1.5rem;
 }
 
 .header {
@@ -64,7 +80,7 @@ body {
 }
 
 .header .top i {
-  color: var(--font-med);
+  color: var(--font-secondary);
 }
 
 .header .top input {
@@ -135,23 +151,25 @@ body {
 }
 
 main {
-  padding: 20px;
+  padding: 0 20px 0 20px;
   background-color: var(--base);
 }
 
 main {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 3fr 1fr;
+  gap: 12px;
 }
 
 h2 {
   padding: 0;
-  margin: 0 0 10px 0;
+  margin: 20px 0 10px 0;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   gap: 12px;
 }
 
@@ -166,7 +184,7 @@ h2 {
 
 .project > a {
   text-decoration: none;
-  color: var(--font-dark);
+  color: var(--font-main);
   font-size: 1.2rem;
   font-weight: bold;
   padding: 0;
@@ -175,13 +193,13 @@ h2 {
 
 .project > a:visited {
   text-decoration: none;
-  color: var(--font-dark);
+  color: var(--font-main);
 }
 
 .project p {
   padding: 0;
   margin: 8px 0 12px 0;
-  color: var(--font-med);
+  color: var(--font-secondary);
 }
 
 .project .buttons {
@@ -192,11 +210,62 @@ h2 {
 
 .project > .buttons > a {
   text-decoration: none;
-  color: var(--font-med);
+  color: var(--font-secondary);
   font-size: 1rem;
 }
 
 .project > .buttons > a:visited {
   text-decoration: none;
   color: var(-font-med);
+}
+
+main > .right .card {
+  background-color: var(--card);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.card h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.card p {
+  padding: 0;
+  margin: 0;
+  color: var(--font-secondary);
+  margin: 8px 0 0 0;
+}
+
+.card hr {
+  margin: 16px 0 16px 0;
+  color: var(--font-secondary);
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 12px;
+}
+
+.profile img {
+  width: 4rem;
+  border-radius: 100%;
+}
+
+.profile .right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profile .right .name {
+  color: var(--font-secondary);
 }
